@@ -1,0 +1,4 @@
+project_id = "mweohabshlexvbtuoldq"
+
+[functions.mock-interview]
+verify_jwt = true

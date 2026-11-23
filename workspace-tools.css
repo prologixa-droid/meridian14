@@ -1,0 +1,15 @@
+.workspace-tools{display:flex;align-items:center;justify-content:space-between;gap:22px;margin:20px 0 18px;padding:20px 22px;background:#f8faf9;border:1px solid #e1e9e4;border-radius:10px}
+.workspace-tools-copy{max-width:680px}
+.workspace-tools-copy h2{margin:4px 0 6px;color:#263c32;font-size:17px}
+.workspace-tools-copy p{margin:0 0 5px;color:#53655b;font-size:11px}
+.workspace-tools-copy small{display:block;color:#7c8981;font-size:9px;line-height:1.55}
+.workspace-tools-actions{display:flex;flex-wrap:wrap;gap:8px;flex-shrink:0}
+.workspace-tools-actions button{white-space:nowrap}
+.workspace-tools [data-state="warning"]{color:#9b5b31}
+.workspace-tools [data-state="ready"]{color:#287455}
+.interview-recovery{margin:12px 0;padding:12px;background:#f2f7f4;border:1px solid #d8e8dd;border-radius:8px}
+.interview-recovery p{margin:0 0 9px;color:#455c4f;font-size:10px;line-height:1.5}
+.interview-recovery>div{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.interview-recovery .button{min-height:34px;padding:0 12px;font-size:10px}
+.interview-recovery .text-button{font-size:10px}
+@media(max-width:760px){.workspace-tools{align-items:flex-start;flex-direction:column;padding:17px}.workspace-tools-actions{width:100%}.workspace-tools-actions button{flex:1}}

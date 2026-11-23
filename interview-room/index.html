@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f5f5f2" />
+  <title>Meridian Interview Room</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell" id="home">
+    <header class="topbar">
+      <a class="wordmark" href="#home" aria-label="Meridian Interview Room home"><span class="brand-mark">M</span><span>meridian<span class="brand-dot">.</span></span></a>
+      <div class="topbar-right"><span class="privacy-label"><i></i> PRIVATE PRACTICE SESSION</span><span class="trainee-chip">T11</span></div>
+    </header>
+
+    <section class="screen setup-screen" id="setupScreen">
+      <div class="intro">
+        <div class="eyebrow">AI DATA ANNOTATION · INTERVIEW PRACTICE</div>
+        <h1>Make your work<br>easy to understand.</h1>
+        <p>Meet your AI interviewer to discuss the Meridian training application and the principles behind careful AI data annotation.</p>
+      </div>
+      <div class="setup-card">
+        <div class="agent-intro"><div class="agent-avatar"><span>M</span><i></i></div><div><b>Your interviewer</b><small>Professional, conversational English</small></div><span class="status-pill" id="serviceStatus"><i></i> Checking</span></div>
+        <label for="focusSelect">Interview focus</label>
+        <select id="focusSelect">
+          <option value="full">Full practice interview</option>
+          <option value="application">Meridian application walkthrough</option>
+          <option value="annotation">AI data annotation fundamentals</option>
+          <option value="scenario">Workplace scenarios</option>
+        </select>
+        <div class="setup-row"><div><label for="durationSelect">Duration</label><select id="durationSelect"><option value="10">10 minutes</option><option value="15" selected>15 minutes</option><option value="20">20 minutes</option></select></div><div><label for="levelSelect">Level</label><select id="levelSelect"><option value="foundation">Foundation</option><option value="standard" selected>Standard</option><option value="stretch">Stretch</option></select></div></div>
+        <div class="privacy-note"><span>◉</span><p><b>Live voice is AI-generated.</b> Microphone access is requested when you begin. When live AI is configured, audio is streamed securely to OpenAI for the conversation and speech recognition. Meridian does not save microphone audio. The interview transcript is held in this browser and sent to the server only when you request your final assessment. You can use typed answers instead.</p></div>
+        <button class="primary-button" id="startButton">Begin interview <span>→</span></button>
+        <div class="keyboard-note">You can answer by voice or type. No camera is used.</div>
+      </div>
+      <div class="setup-foot"><span>TRAINEE11</span><span>PT-100 · 100 PRODUCTS · 15 FAMILIES</span><span>ENGLISH</span></div>
+    </section>
+
+    <section class="screen interview-screen" id="interviewScreen" hidden>
+      <div class="session-header"><div><div class="eyebrow">MOCK INTERVIEW <span id="modeLabel">· PREPARING</span></div><h1 id="sessionTitle">Let’s begin.</h1></div><div class="session-clock"><b id="timer">00:00</b><small>ELAPSED</small></div></div>
+      <div class="progress-wrap"><div><span id="progressLabel">Getting ready</span><span id="questionCount"></span></div><div class="progress-track"><i id="progressBar"></i></div></div>
+      <div class="conversation" id="conversation" aria-live="polite" aria-relevant="additions"></div>
+      <div class="speaker-status"><div class="voice-mark" id="voiceMark"><i></i><i></i><i></i></div><span id="speakerStatus">Preparing your interviewer</span><button class="text-button" id="repeatButton" disabled>Repeat question</button></div>
+      <div class="answer-panel"><label for="answerInput">Your answer</label><textarea id="answerInput" rows="3" placeholder="Speak or type naturally. Use Ctrl + Enter to send." disabled></textarea><div class="answer-actions"><div class="voice-tools"><button class="secondary-button" id="speakButton" disabled><span>◉</span> Speak</button><span id="speechNote">Browser voice input status</span></div><div class="send-tools"><button class="text-button" id="downloadButton">Save transcript</button><button class="primary-button compact" id="sendButton" disabled>Send answer</button></div></div></div>
+      <div class="session-footer"><span id="sessionHint">Your transcript stays in this browser.</span><button class="text-button end-button" id="endButton" disabled>Finish and review</button></div>
+      <section class="assessment" id="assessment" hidden></section>
+    </section>
+
+    <footer class="page-footer"><span>MERIDIAN INTERVIEW PRACTICE</span><span>Training aid only · Not a hiring decision system</span></footer>
+  </main>
+  <script src="config.js"></script>
+  <script src="interview.js"></script>
+</body>
+</html>
